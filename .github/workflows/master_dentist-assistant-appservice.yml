@@ -46,6 +46,7 @@ jobs:
           echo LuisAPIKey=${{secrets.LUISAPIKEY}} >> .env
           echo LuisAPIHostName="https://australiaeast.api.cognitive.microsoft.com/" >> .env
           echo SchedulerEndpoint="http://dentistscheduler-udacity.azurewebsites.net/" >> .env
+          cat .env
 
 
 
