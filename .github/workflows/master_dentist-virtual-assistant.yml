@@ -33,20 +33,20 @@ jobs:
           name: node-app
           path: .
          
-      - name: Create env file
-        run: |
-          touch .env
-          echo MicrosoftAppType="MultiTenant" >> .env
-          echo MicrosoftAppId="bc080611-0bea-49a5-bbe9-b321c0a898d8" >> .env
-          echo MicrosoftAppPassword=${{secrets.MICROSOFTAPPPASSWORD}} >> .env
-          echo QnAKnowledgebaseId="641a0901-2272-4c62-9e27-6cd62a106731" >> .env
-          echo QnAAuthKey=${{secrets.QNAAUTHKEY}} >> .env
-          echo QnAEndpointHostName="https://dentist-assistant-qnakb.azurewebsites.net/qnamaker" >> .env
-          echo LuisAppId="b52f2b84-0f43-4b68-b829-900f9e076a22" >> .env
-          echo LuisAPIKey=${{secrets.LUISAPIKEY}} >> .env
-          echo LuisAPIHostName="https://australiaeast.api.cognitive.microsoft.com/" >> .env
-          echo SchedulerEndpoint="http://dentistscheduler-udacity.azurewebsites.net/" >> .env
-          cat .env
+      # - name: Create env file
+      #   run: |
+      #     touch .env
+      #     echo MicrosoftAppType="MultiTenant" >> .env
+      #     echo MicrosoftAppId="bc080611-0bea-49a5-bbe9-b321c0a898d8" >> .env
+      #     echo MicrosoftAppPassword=${{secrets.MICROSOFTAPPPASSWORD}} >> .env
+      #     echo QnAKnowledgebaseId="641a0901-2272-4c62-9e27-6cd62a106731" >> .env
+      #     echo QnAAuthKey=${{secrets.QNAAUTHKEY}} >> .env
+      #     echo QnAEndpointHostName="https://dentist-assistant-qnakb.azurewebsites.net/qnamaker" >> .env
+      #     echo LuisAppId="b52f2b84-0f43-4b68-b829-900f9e076a22" >> .env
+      #     echo LuisAPIKey=${{secrets.LUISAPIKEY}} >> .env
+      #     echo LuisAPIHostName="https://australiaeast.api.cognitive.microsoft.com/" >> .env
+      #     echo SchedulerEndpoint="http://dentistscheduler-udacity.azurewebsites.net/" >> .env
+      #     cat .env
 
   deploy:
     runs-on: ubuntu-latest
