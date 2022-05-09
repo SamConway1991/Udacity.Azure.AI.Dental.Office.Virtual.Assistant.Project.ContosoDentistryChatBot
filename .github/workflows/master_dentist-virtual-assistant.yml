@@ -32,7 +32,8 @@ jobs:
         with:
           name: node-app
           path: .
-         - name: Create env file
+         
+      - name: Create env file
         run: |
           touch .env
           echo MicrosoftAppType="MultiTenant" >> .env
